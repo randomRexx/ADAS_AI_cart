@@ -1,0 +1,33 @@
+{
+	"Timestamp": "2020-4-2 12:45:36.435350",
+	"Front": {
+		"Radar": {
+			"detection":[ "unsigned int", "unsigned int", ...] //-90 graden, -89 graden, ... 89 graden, 90 graden
+			},
+		"Camera" : [ //all objects detected
+		{
+			"detected object": "line",
+			"position": 55 //-255(left) - 255(right)
+		},
+		{
+			"detected object2": "person",
+			"position": -12
+		}
+		]
+	},
+	"Back": {
+		"Radar": {
+			"detection":[ "unsigned int", "unsigned int", ...] //-90 graden, -89 graden, ... 89 graden, 90 graden
+			},
+		"Camera" : [ //all objects detected
+		{
+			"detected object": "line",
+			"position": 55 //-255(left) - 255(right)
+		},
+		{
+			"detected object2": "person",
+			"position": -12
+		}
+		]
+	}
+}
