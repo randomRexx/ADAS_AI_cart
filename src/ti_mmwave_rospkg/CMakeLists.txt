@@ -10,6 +10,7 @@ project(ti_mmwave_rospkg)
 find_package(catkin REQUIRED COMPONENTS
   nodelet
   roscpp
+  rospy
   serial
   std_msgs
   sensor_msgs
@@ -114,7 +115,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES mmwave
-  #CATKIN_DEPENDS nodelet roscpp serial std_msgs
+  CATKIN_DEPENDS message_runtime #nodelet roscpp serial std_msgs
   DEPENDS system_lib
 )
 
