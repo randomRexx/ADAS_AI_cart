@@ -1,0 +1,35 @@
+Groep Jetson Nano ->
+
+1/05/2020 met Ali. Alabdulwahhab
+	verduidelijking i.v.m: - de verzonden data en hun betekenis.
+								Camera:
+								- # objecten op het huidige camera beeld
+								- soort object (car, person, truck,etc.)
+								- positie van het object op het camera beeld
+									- x ( meest linkse kant van het object op de foto)
+									- X ( meest rechtse kant van het object op de foto)
+										[ X - x = object breedte ]
+										- dit kan gebruikt worden om de X-positie te vinden van het object
+										  en of het object zich links of rechts van de wagen bevind
+										
+									- y ( hoogste punt van het object op de foto)
+									- Y ( laagste punt van het object op de foto)
+										[ Y - y = object hoogte ]
+										- dit kan gebruikt worden om een afstands schatting te maken van het object
+										  voor redundancy of extreem korte afstanden
+								Radar:	
+								- X_Radar ( X-positie van het object via de radar)
+									- Redundancy voor als de camera een object niet herkent
+										
+								- Y_Radar ( Y-positie van het object via de radar)
+									- ( root(X_Radar² + Y_Radar²) = effectieve afstand van het object
+										
+								- Velocity (snelheid van het object)
+									
+						   - gebruikte hardware 
+								- zedboard
+								- Intel T265 Realsense Tracking camera
+								- TI IWR1642 Radar
+						   
+						   - Soort data format
+								- Json
