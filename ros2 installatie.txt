@@ -1,0 +1,35 @@
+roslib install "libasio-dev"
+python3 -m pip install -U 
+	lark-parser
+	
+apt install colcon-common-extensions
+
+both 'build-guide' en 'install-guide' roslib dependencies downloaden
+
+GEEN ANACONDA DONLOADEN
+
+deze verstoord de linker van de libSM.so file
+op voorand anaconda van het PATH verwijderen 
+
+check dit door 
+	echo $PATH te doen
+
+doe dan PATH=[updated_path]
+	waar updated_path = path zonder anaconda3 files
+
+anders:
+ERROR CODE
+rviz_rendering   no refrence uuid_generate@UUID_1.0 en uuid_unparse_lower@UUID_1.0
+
+	ga naar /ros2_map/build/rviz_rendering/CMakeFiles/
+	
+	voor elke test_target.dir (niet test_target_action.dir)
+	
+	pas de link.txt file aan met het volgende
+	
+		elke instance van /home/gebruiker/anaconda3/lib -> /usr/lib/x86_64-linux-gnu
+		
+		LET OP
+		de bijhorende Qt .so files kunnen een andere versie hebben bv. 5.9.7 i.p.v 5.9.5
+		
+		check eerst bij usr/lib/x86_64-linux-gnu/ welke versie er is !!!
