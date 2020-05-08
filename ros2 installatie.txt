@@ -1,4 +1,9 @@
 
+volg de instructies voor beide 'installation-linux' en 'build-linux'op de volgende URL
+https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Development-Setup/
+
+
+ERROR CODE
 ament-core 'no module named lark':
 roslib install "libasio-dev"
 python3 -m pip install -U 
