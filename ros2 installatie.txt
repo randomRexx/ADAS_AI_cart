@@ -39,3 +39,7 @@ rviz_rendering   no refrence uuid_generate@UUID_1.0 en uuid_unparse_lower@UUID_1
 		de bijhorende libQt5... .so files kunnen een andere versie hebben bv. 5.9.7 i.p.v 5.9.5
 		
 		check eerst bij usr/lib/x86_64-linux-gnu/ welke versie er is van de libQT5... .so bestanden !!!
+		
+	achteraf ga naar de ros2_map/build/rviz_common/cmake_install.cmake
+		in lijn 54 is er zijn er een hoop paden
+		verwijder hier de /home/gebruiker/anaconda3/lib:
