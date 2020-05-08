@@ -1,3 +1,5 @@
+
+ament-core 'no module named lark':
 roslib install "libasio-dev"
 python3 -m pip install -U 
 	lark-parser
@@ -22,14 +24,18 @@ ERROR CODE
 rviz_rendering   no refrence uuid_generate@UUID_1.0 en uuid_unparse_lower@UUID_1.0
 
 	ga naar /ros2_map/build/rviz_rendering/CMakeFiles/
+	en ros2_map/build/rviz_rendering_tests/CMakeFiles/
+	en ros2_map/build/rviz_common/CMakeFiles/
 	
 	voor elke test_target.dir (niet test_target_action.dir)
 	
 	pas de link.txt file aan met het volgende
-	
+		verwijder ook /home/gebruiker/anaconda3/lib: in de link.txt files
 		elke instance van /home/gebruiker/anaconda3/lib -> /usr/lib/x86_64-linux-gnu
 		
-		LET OP
-		de bijhorende Qt .so files kunnen een andere versie hebben bv. 5.9.7 i.p.v 5.9.5
+		gebruik 'ctrl + f' om ''anaconda3'' makkelijker te vinden in de link.txt files
 		
-		check eerst bij usr/lib/x86_64-linux-gnu/ welke versie er is !!!
+		LET OP
+		de bijhorende libQt5... .so files kunnen een andere versie hebben bv. 5.9.7 i.p.v 5.9.5
+		
+		check eerst bij usr/lib/x86_64-linux-gnu/ welke versie er is van de libQT5... .so bestanden !!!
