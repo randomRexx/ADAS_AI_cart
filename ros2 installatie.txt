@@ -32,6 +32,7 @@ rviz_rendering   no refrence uuid_generate@UUID_1.0 en uuid_unparse_lower@UUID_1
 	en ros2_map/build/rviz_rendering_tests/CMakeFiles/
 	en ros2_map/build/rviz_common/CMakeFiles/
 	en ros2_map/build/rviz_default_plugins/CMakeFiles/
+	en ros2_map/build/rviz2/CMakeFiles/
 	
 	voor elke test/target.dir (niet test_target_"action/autogen".dir)
 	
