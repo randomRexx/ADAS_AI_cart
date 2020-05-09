@@ -57,3 +57,4 @@ rviz_rendering   no refrence uuid_generate@UUID_1.0 en uuid_unparse_lower@UUID_1
 		
 		zie link_txt_aanpasing_ 1 - 5 .png als zichtbaar voorbeeld
 		(in mijn geval waren de anaconda3 .so files in versie '5.9.7' i.p.v '5.9.5' die in de "usr/lib/x86_64-linux-gnu" 			situeren.	CHECK DIT OP VOORAND voordat je de versie aanpast in het txt bestand) 
+
