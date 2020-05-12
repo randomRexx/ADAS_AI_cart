@@ -3,7 +3,7 @@ Gemaakt door studenten van [de hogeschool PXL](https://www.pxl.be) op opdracht v
 
 Het doel van dit project is een ADAS systeem ontwikkelen voor een golfkart autonoom te laten rijden.
 
-Om objecten te kunnen detecteren wordt er gebruik gemaakt van een Pytorch resnet50-model en openCV die input krijgt van de [Intel T265 Realsense Tracking Camera](https://www.intelrealsense.com/tracking-camera-t265/) / [Intel D435 Realsense Camera]() en de [TI IWR1642 Radar](http://www.ti.com/tool/IWR1642BOOST).
+Om objecten te kunnen detecteren wordt er gebruik gemaakt van een Pytorch resnet50-model en openCV die input krijgt van de [Intel T265 Realsense Tracking Camera](https://www.intelrealsense.com/tracking-camera-t265/) / [Intel D435 Realsense Camera](https://www.intelrealsense.com/depth-camera-d435/) en de [TI IWR1642 Radar](http://www.ti.com/tool/IWR1642BOOST).
 
 Deze data wordt doorgestuurd naar de [Jetson-Nano van een meewerkende groep](https://github.com/KingAbad/Autonomous_Cart_2?fbclid=IwAR21YFBcbC4viqrMCfkstqgnDQ-sq7s7LPgTWAJHs7tx8XUIrGCixJqF12Q) via Json. 
 
@@ -31,7 +31,7 @@ Dit wordt geprogrameerd op de [Ultra96](http://zedboard.org/product/ultra96-v2-d
 * [VITIS-AI](https://www.xilinx.com/products/design-tools/vitis/vitis-ai.html) - gebruikte ACAP systeem voor de Camera en Radar (Ultra96)
 
 * [Intel RealSense Camera T265](https://www.intelrealsense.com/tracking-camera-t265/) - gebruikte camera (zedboard).
-* [Intel D435 Camera]() - gebruikte camera (ultra96)
+* [Intel D435 Camera](https://www.intelrealsense.com/depth-camera-d435/) - gebruikte camera (ultra96)
 * [TI IWR1642](http://www.ti.com/tool/IWR1642BOOST) - gebruikte Radar.
 * [zedboard](http://zedboard.org/product/zedboard) - gebruikte FPGA bord
 * [Ultra96](http://zedboard.org/product/ultra96-v2-development-board) - gebruikte FPGA bord
