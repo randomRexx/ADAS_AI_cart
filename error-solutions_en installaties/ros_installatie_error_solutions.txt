@@ -1,0 +1,58 @@
+volg de instructies voor beide 'installation-linux' en 'build-linux'op de volgende URL
+https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Development-Setup/
+
+
+ERROR CODE
+ament-core 'no module named lark':
+roslib install "libasio-dev"
+python3 -m pip install -U 
+	lark-parser
+	
+apt install colcon-common-extensions
+
+both 'build-guide' en 'install-guide' roslib dependencies downloaden
+
+GEEN ANACONDA DONLOADEN
+
+deze verstoord de linker van de libSM.so file
+op voorand anaconda van het PATH verwijderen 
+
+check dit door 
+	echo $PATH te doen
+
+doe dan PATH=[updated_path]
+	waar updated_path = path zonder anaconda3 files
+
+anders:
+ERROR CODE
+rviz_rendering   no refrence uuid_generate@UUID_1.0 en uuid_unparse_lower@UUID_1.0
+
+	ga naar /ros2_map/build/rviz_rendering/CMakeFiles/
+	en ros2_map/build/rviz_rendering_tests/CMakeFiles/
+	en ros2_map/build/rviz_common/CMakeFiles/
+	en ros2_map/build/rviz_default_plugins/CMakeFiles/
+	en ros2_map/build/rviz2/CMakeFiles/
+	
+	voor elke test/target.dir (niet test_target_"action/autogen".dir)
+	
+	pas de link.txt file aan met het volgende
+		verwijder ook /home/gebruiker/anaconda3/lib: in de link.txt files
+		zie link_txt_aanpassing_5.png)
+		
+		elke instance van /home/gebruiker/anaconda3/lib -> /usr/lib/x86_64-linux-gnu
+		
+		gebruik 'ctrl + f' en type ''anaconda3'' of "3" om de anaconda/lib paths makkelijker te vinden in de link.txt files
+		(deze files kunnen zeer groot zijn, dus dit kan lang duren)
+		
+		LET OP
+		de bijhorende libQt5... .so files kunnen een andere versie hebben bv. 5.9.7 i.p.v 5.9.5
+		
+		check eerst bij usr/lib/x86_64-linux-gnu/ welke versie er is van de libQT5... .so bestanden !!!
+		
+	achteraf ga naar de ros2_map/build/rviz_common/cmake_install.cmake
+		in lijn 54 zijn er een hoop paden
+		verwijder hier de /home/gebruiker/anaconda3/lib:
+		(zie cmake_install_cmake_aanpassing.png)
+		
+		zie link_txt_aanpasing_ 1 - 5 .png als zichtbaar voorbeeld
+		(in mijn geval waren de anaconda3 .so files in versie '5.9.7' i.p.v '5.9.5' die in de "usr/lib/x86_64-linux-gnu" 

@@ -1,0 +1,106 @@
+Booten van Linux op het zedboard
+	-> via putty
+	-> 115200 baud rate
+	-> regelmatig aan en uitzetten van het zedboard tot de boot opstart.
+	
+Kernel programming in C.
+	-> Stappen van volgende video URL's
+		ep1 : https://www.youtube.com/watch?v=XPnmB-THjiY&t=1177s
+		
+			
+		ep2 : https://www.youtube.com/watch?v=YjuxvKIaETA&t=181s
+		
+			-QEMU for zynq
+			
+				-downloaden en gebruiken van QEMU voor de arm64
+					aanpassen van de config_files en layer_files
+			
+		ep3 : https://www.youtube.com/watch?v=U5G_rT-GwPE&t=532s
+		
+			-Kernel test module
+
+				-schrijven van een simpele kernel C file
+				-bitbake voor een bruikbare image van de Kernel C file
+				-module insertion
+			
+		ep4 : https://www.youtube.com/watch?v=Zi6ooCultI0 
+		
+			-Kernel read, write, ioctl
+				-schrijven van eigen woorden om te printen in de dmsg
+				-via ioctl de msg aanpassen van lowercase naar upper
+			
+		ep5 : https://www.youtube.com/watch?v=gjeh4J4HXi8&t=727s
+		
+			-Final Kernel driver
+				
+				-omzetten van een bitstream en C/ python files naar .bit
+				-combineren met de C kernel
+				-draaian op het zedboard
+			
+		ep6 : https://www.youtube.com/watch?v=gp7rm9sV23I
+		
+			-application deployment
+				- kleine test app maken
+				- lezen van de bijhorende driver en implementeren in de app
+				- overbrengen naar het zedboard.
+			
+Realsense cam.
+	-downloaden van SDK 2.0 voor ubuntu 18.04
+	
+	-builden van de programma's
+	
+	-testen
+	
+	-problemen:
+		-intel camera wordt niet gevonden
+		
+			-regelmatig aan en uit zetten van de camera
+			
+			-de usb van links naar rechts insteken
+			
+				- de movidus mag niet vooraf activeren
+				
+			-linux rebooten
+			
+			-checken of usb 3.0 geactiveerd is
+			
+		-de C files willen niet builden
+			-op dit moment nog geen oplossing voor gevonden
+			
+	-zoeken naar een manier om de fisheye om te zetten naar regulier formaat
+		-OpenCV::Fisheye::undistortimage()
+			url:	https://docs.opencv.org/trunk/db/d58/group__calib3d__fisheye.html#ga167df4b00a6fd55287ba829fbf9913b9
+		
+	-ROS 2 voor T265 Realsense:
+		-
+	
+- pytorch model
+
+	-poging 1 : CIFAR10
+		-eigen pytorch model met eigen layers
+		-1 malig gelukt
+		
+		-problemen
+			-CIFAR10 is nu nonstop currupt en kan niet meer gebruikt worden
+	
+	-poging 2: Resnet50
+		- pytorch model is voor getrained
+		- op de foto de objecten laten aanduiden met naam via opencv
+		- object data visualiseren in de shell
+		- het model omzetten naar een img voor het zedboard
+		
+		- te doen
+			-de camera koppelen aan het model
+				-eerst moet de fisheye omgezet worden
+				
+Vitis-AI
+	
+	- een ACAP die het python model accelereert op het zedboard via DPU
+	
+	URL:
+	https://github.com/Xilinx/Vitis-AI/blob/v1.0/mpsoc/README.md
+	https://github.com/UviDTE-FPSoC/vitis-dnn
+	https://www.xilinx.com/support/documentation/sw_manuals_j/ai_inference/v1_6/ug1327-dnndk-user-guide.pdf
+	
+
+	
