@@ -1,4 +1,3 @@
 # ADAS op Zedboard/Ultra96
-PXL school project for the Electronica - ICT students department.
 
-creating a FPGA based ADAS system with neural networks (preferable via pytorch).
+Project Onderzoek, in opdracht van [Vincent Claes](https://www.linkedin.com/in/vincentclaes/), te [PXL](https://www.pxl.be/).
