@@ -1,5 +1,5 @@
 # ADAS_AI_cart
-Gemaakt door studenten van [de hogeschool PXL](https://www.pxl.be) op opdracht van [Vincent Claes](https://www.linkedin.com/in/vincentclaes/).
+Gemaakt door studenten van [de hogeschool PXL](https://www.pxl.be).
 
 Het doel van dit project is een ADAS systeem ontwikkelen voor een golfkart autonoom te laten rijden.
 
@@ -35,9 +35,9 @@ Dit wordt geprogrameerd op de [Ultra96](http://zedboard.org/product/ultra96-v2-d
 * [Ultra96](http://zedboard.org/product/ultra96-v2-development-board) - gebruikte FPGA bord
 
 ## Auteurs
-* *Vincent Claes*     -Docent / Product Owner- [LinkedIn](https://www.linkedin.com/in/vincentclaes/)
-* *Bart Stukken*      -Docent / Scrum Master- [LinkedIn]() - nog toe te voegen -
-* *Bart Gripsen*      -Student / Scrum Member- [LinkedIn](linkedin.com/in/bart-grispen-9634b1181)
-* *Dennis Merken*     -Student / Scrum Member- [LinkedIn](linkedin.com/in/dennis-merken-93747719b)
-* *Jethro Pans*       -Student / Scrum Member- [LinkedIn](https://www.linkedin.com/in/jethro-pans-67518b1a3/)
-* *Kris Teuwen*       -Student / Scrum Member- [LinkedIn](https://www.linkedin.com/in/kris-teuwen-7292a4172/)
+* *Vincent Claes*     - Product Owner- [LinkedIn](https://www.linkedin.com/in/vincentclaes/)
+* *Bart Stukken*      - Scrum Master- [LinkedIn](https://www.linkedin.com/in/bart-stukken-7a7659b0/)
+* *Bart Gripsen*      - Scrum Member- [LinkedIn](linkedin.com/in/bart-grispen-9634b1181)
+* *Dennis Merken*     - Scrum Member- [LinkedIn](linkedin.com/in/dennis-merken-93747719b)
+* *Jethro Pans*       - Scrum Member- [LinkedIn](https://www.linkedin.com/in/jethro-pans-67518b1a3/)
+* *Kris Teuwen*       - Scrum Member- [LinkedIn](https://www.linkedin.com/in/kris-teuwen-7292a4172/)
