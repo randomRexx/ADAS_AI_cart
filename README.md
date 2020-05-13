@@ -37,7 +37,7 @@ Dit wordt geprogrameerd op de [Ultra96](http://zedboard.org/product/ultra96-v2-d
 ## Auteurs
 * *Vincent Claes*     -Docent / Product Owner- [LinkedIn](https://www.linkedin.com/in/vincentclaes/)
 * *Bart Stukken*      -Docent / Scrum Master- [LinkedIn]() - nog toe te voegen -
-* *Bart Gripsen*      -Student / Scrum Member- [LinkedIn]() - nog toe te voegen -
-* *Dennis Merken*     -Student / Scrum Member- [LinkedIn]() - nog toe te voegen -
+* *Bart Gripsen*      -Student / Scrum Member- [LinkedIn](linkedin.com/in/bart-grispen-9634b1181)
+* *Dennis Merken*     -Student / Scrum Member- [LinkedIn](linkedin.com/in/dennis-merken-93747719b)
 * *Jethro Pans*       -Student / Scrum Member- [LinkedIn](https://www.linkedin.com/in/jethro-pans-67518b1a3/)
-* *Kris Teuwen*       -Student / Scrum Member- [LinkedIn]() - nog toe te voegen -
+* *Kris Teuwen*       -Student / Scrum Member- [LinkedIn](https://www.linkedin.com/in/kris-teuwen-7292a4172/)
