@@ -10,9 +10,7 @@ Deze data wordt doorgestuurd naar de [Jetson-Nano van een meewerkende groep](htt
 Dit wordt geprogrameerd op de [Ultra96](http://zedboard.org/product/ultra96-v2-development-board) en/of het [zedboard](http://zedboard.org/product/zedboard) aan de hand van ROS2/ROS1 en/of U-boot met C-Kernels om een application te maken en worden achteraf vergeleken op effecientie.
 ## Branches
 ```
-  Documentation                               algemene documentatie en instructies van installeren
-  Radar                                       bestanden voor de TI IWR1642
-  zedboard        
+  Documentation                               algemene documentatie en instructies van installeren       
   zedboard_ros2_errors_solutions              Errors met het installeren van ROS2 en oplossingen
   zedboard-C-kernels                          C-test kernels voor Ubuntu 18.04 bionical
   zedboard-pytorch-resnet50-obj-detection     Resnet50 python programma met afbeeldingen
