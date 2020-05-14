@@ -54,7 +54,18 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   *
   
   **torchVision resnet50 model**
-  * download the 
+  * type "sudo apt-get install python3 \ python3-pip \ python3-opencv" 
+  * type "pip3 install torchvision"
+  * download the model on the "zedboard-pytorch-resnet50-obj-detection" branch.
+  * type "nano object_detection.py" in de linux terminal to open the python program.
+  * scroll to the bottom where a .png image is requested.
+  
+  <p align="center"><img src=""></p>
+  
+  * change the input image to the an .png image of own choice.
+  <p align="center"><img src=""></p>
+  * save and exit nano and run the "object_detection.py"
+  <p align="center"><img src=""></p>
   
 </details>
 <details>
