@@ -80,7 +80,7 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   * Follow [the guide](https://www.hackster.io/anujvaishnav20/building-ubuntu-for-ultra96-fpga-c9aefa) to set up the Ubuntu for Ultra96.
   
   * From here on follow the same steps as discussed in the Zedboard section.
-
+</details>
 ## Materials and software
 **Used Software**
 * [Python](https://www.python.org/) - used programming language for the model.
