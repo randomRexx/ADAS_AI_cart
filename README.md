@@ -79,8 +79,6 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   **setting up of the VM with ubuntu 18.04**
   * Follow [the guide](https://www.hackster.io/anujvaishnav20/building-ubuntu-for-ultra96-fpga-c9aefa) to set up the Ubuntu for Ultra96.
   
-  <p align="center"><img src="VM_USB.png"></p>
-  
   * From here on follow the same steps as discussed in the Zedboard section.
 
 ## Materials and software
