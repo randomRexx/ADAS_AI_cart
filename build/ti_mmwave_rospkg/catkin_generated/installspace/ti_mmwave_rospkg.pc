@@ -1,8 +1,0 @@
-prefix=/home/jethro/IWR1642_ROS/install
-
-Name: ti_mmwave_rospkg
-Description: Description of ti_mmwave_rospkg
-Version: 3.3.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lmmwave
-Requires: message_runtime

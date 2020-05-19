@@ -1,2 +1,0 @@
-serial:ti_mmwave_rospkg
--DCATKIN_DEVEL_PREFIX=/home/jethro/IWR1642_ROS/devel -DCMAKE_INSTALL_PREFIX=/home/jethro/IWR1642_ROS/install -G Unix Makefiles
