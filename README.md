@@ -60,12 +60,11 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   * type "nano object_detection.py" in de linux terminal to open the python program.
   * scroll to the bottom where a .png image is requested.
   
-  <p align="center"><img src=""></p>
+  <p align="center"><img src="python_main.png"></p>
   
   * change the input image to the an .png image of own choice.
-  <p align="center"><img src=""></p>
-  * save and exit nano and run the "object_detection.py"
-  <p align="center"><img src=""></p>
+
+  * save and exit nano and run the "object_detection.py".
   
 </details>
 <details>
