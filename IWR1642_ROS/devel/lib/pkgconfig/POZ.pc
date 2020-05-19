@@ -1,0 +1,8 @@
+prefix=/home/jethro/IWR1642_ROS/devel
+
+Name: POZ
+Description: Description of POZ
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
