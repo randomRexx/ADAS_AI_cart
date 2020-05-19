@@ -63,7 +63,16 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   * Type "cp -R ~/ADAS_AI_Cart/radar/ti_mmwave_rospkg/ ~/[workspace dir]/src/"
   * Type "cp -R ~/ADAS_AI_Cart/radar/serial/ ~/[workspace dir]/src/"
   * Now the needed Ros packages are in the Catkin workspace.
-  * 
+  * Go to the workspace.
+  * Type "catkin_make && source devel/setup.bash"
+  * Type "echo "source <workspace_dir>/devel/setup.bash" >> ~/.bashrc"
+  * Plug in the radar and type in the VM "sudo chmod 666 /dev/ttyACM0"
+  * And "sudo chmod 666 /dev/ttyACM1"
+  * To start the radar, type "roslaunch ti_mmwave_rospkg 1642es2_short_range.launch"
+  * Now the RVIZ is running.
+  * Open a second terminal.
+  * Type "rosrun ti_mmwave_rospkg Radar_Read.py"
+  * This will print the X, Y, Velocity and Range for every detected object.
   
   **torchVision resnet50 model**
   * type "sudo apt-get install python3 \ python3-pip \ python3-opencv" 
