@@ -72,10 +72,17 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   <summary>Ultra96</summary>
   
   ## Ultra96 installation
+  these installation steps include:
+  * 1 [Intel RealSense Camera D435](https://www.intelrealsense.com/depth-camera-d435/)
+  * 1 [Ultra96](http://zedboard.org/product/ultra96-v2-development-board)
+  * 1 [TI IWR1642](http://www.ti.com/tool/IWR1642BOOST)
   
+  **setting up of the VM with ubuntu 18.04**
+  * Follow [the guide](https://www.hackster.io/anujvaishnav20/building-ubuntu-for-ultra96-fpga-c9aefa) to set up the Ubuntu for Ultra96.
   
-</details>
-<p align="center"><img src=""></p>
+  <p align="center"><img src="VM_USB.png"></p>
+  
+  * From here on follow the same steps as discussed in the Zedboard section.
 
 ## Materials and software
 **Used Software**
