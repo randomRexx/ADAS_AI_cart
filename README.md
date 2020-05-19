@@ -49,6 +49,13 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
     it is recommended to install the ros dependencies ("rosdep" command) of both "building ROS 2 linux" and "installation ROS 2 linux".
   * for colcon building errors go to the "ros2_errors_and_solutions" branch.
   
+  **Setting up ROS Melodic**
+  * To set up ROS Melodic, follow the instructions on this [link](http://wiki.ros.org/melodic/Installation/Ubuntu).
+  * Next thing to do is creating a Catkin workspace. A Catkin-workspace is a low-level build system and infrastructure for Ros. To install Catkin for Ros Melodic type "sudo apt-get install ros-melodic-catkin"
+  * Because this project uses Python, install the Catkin dependencies with "sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev build-essential"
+    This includes CMake, Python, GTest and GNU C++ Compiler.
+  * To create a Catkin workspace, follow this short [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+  
   **setting up the TI IWR1642 Radar**
   *
   *
