@@ -81,6 +81,7 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   
   * From here on follow the same steps as discussed in the Zedboard section.
 </details>
+
 ## Materials and software
 **Used Software**
 * [Python](https://www.python.org/) - used programming language for the model.
