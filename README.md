@@ -86,3 +86,6 @@ The UUID error should now be fixed and "colcon build" can be executed succesfull
   If these steps did not fix this problem then the usb3.0 drivers of the VM are not compatible to use the Realsense camera. 
   
 </details>
+<details>
+  <summary>Radar</summary>
+</details>
