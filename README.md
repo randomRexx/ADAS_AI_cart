@@ -55,6 +55,7 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   * Type `sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev build-essential`
   * Now Catkin is downloaded and the needed dependencies are installed.
   * To create a Catkin workspace, follow this short [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+  <p align="center"><img src="https://github.com/randomRexx/ADAS_AI_cart/blob/radar/Catkin_Created.PNG"></p>
   
   **setting up the TI IWR1642 Radar**
   * If the Catkin workspace is created it's time to set up the Ros packages.
