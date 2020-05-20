@@ -60,8 +60,8 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   * If the Catkin workspace is created it's time to set up the Ros packages.
   * Go to the home folder.
   * Type `git clone https://github.com/randomRexx/ADAS_AI_cart.git`
-  * Type `cp -R ~/ADAS_AI_Cart/radar/ti_mmwave_rospkg/ ~/[workspace dir]/src/`
-  * Type `cp -R ~/ADAS_AI_Cart/radar/serial/ ~/[workspace dir]/src/`
+  * Type `cp -R ~/ADAS_AI_cart/radar/ti_mmwave_rospkg/ ~/[workspace dir]/src/`
+  * Type `cp -R ~/ADAS_AI_cart/radar/serial/ ~/[workspace dir]/src/`
   * Now the needed Ros packages are in the Catkin workspace.
   * Go to the workspace.
   * Type `catkin_make && source devel/setup.bash`
