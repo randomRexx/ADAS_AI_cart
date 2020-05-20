@@ -72,10 +72,12 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   * And `sudo chmod 666 /dev/ttyACM1`
   * To start the radar, type `roslaunch ti_mmwave_rospkg 1642es2_short_range.launch`
   * Now the RVIZ is running.
+  <p align="left"><img src="https://github.com/randomRexx/ADAS_AI_cart/blob/radar/RVIZ_output.PNG"></p>
   * Open a second terminal.
   * Type `rosrun ti_mmwave_rospkg Radar_Read.py`
   * This will print the X, Y, Velocity and Range for every detected object.
-  
+  <p align="left"><img src="https://github.com/randomRexx/ADAS_AI_cart/blob/radar/Radar_Read_Output.PNG"></p>
+   
   **torchVision resnet50 model**
   * type `sudo apt-get install python3 \ python3-pip \ python3-opencv` 
   * type `pip3 install torchvision`
