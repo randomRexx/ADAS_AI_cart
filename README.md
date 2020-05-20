@@ -51,34 +51,34 @@ The project is programmed on a [Ultra96](http://zedboard.org/product/ultra96-v2-
   
   **Setting up ROS Melodic**
   * To set up ROS Melodic, follow the instructions on this [link](http://wiki.ros.org/melodic/Installation/Ubuntu).
-  * Type "sudo apt-get install ros-melodic-catkin"
-  * Type "sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev build-essential"
+  * Type `sudo apt-get install ros-melodic-catkin`
+  * Type `sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev build-essential`
   * Now Catkin is downloaded and the needed dependencies are installed.
   * To create a Catkin workspace, follow this short [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
   
   **setting up the TI IWR1642 Radar**
   * If the Catkin workspace is created it's time to set up the Ros packages.
   * Go to the home folder.
-  * Type "git clone https://github.com/randomRexx/ADAS_AI_cart.git"
-  * Type "cp -R ~/ADAS_AI_Cart/radar/ti_mmwave_rospkg/ ~/[workspace dir]/src/"
-  * Type "cp -R ~/ADAS_AI_Cart/radar/serial/ ~/[workspace dir]/src/"
+  * Type `git clone https://github.com/randomRexx/ADAS_AI_cart.git`
+  * Type `cp -R ~/ADAS_AI_Cart/radar/ti_mmwave_rospkg/ ~/[workspace dir]/src/`
+  * Type `cp -R ~/ADAS_AI_Cart/radar/serial/ ~/[workspace dir]/src/`
   * Now the needed Ros packages are in the Catkin workspace.
   * Go to the workspace.
-  * Type "catkin_make && source devel/setup.bash"
-  * Type "echo "source <workspace_dir>/devel/setup.bash" >> ~/.bashrc"
-  * Plug in the radar and type in the VM "sudo chmod 666 /dev/ttyACM0"
-  * And "sudo chmod 666 /dev/ttyACM1"
-  * To start the radar, type "roslaunch ti_mmwave_rospkg 1642es2_short_range.launch"
+  * Type `catkin_make && source devel/setup.bash`
+  * Type `echo "source <workspace_dir>/devel/setup.bash" >> ~/.bashrc`
+  * Plug in the radar and type in the VM `sudo chmod 666 /dev/ttyACM0`
+  * And `sudo chmod 666 /dev/ttyACM1`
+  * To start the radar, type `roslaunch ti_mmwave_rospkg 1642es2_short_range.launch`
   * Now the RVIZ is running.
   * Open a second terminal.
-  * Type "rosrun ti_mmwave_rospkg Radar_Read.py"
+  * Type `rosrun ti_mmwave_rospkg Radar_Read.py`
   * This will print the X, Y, Velocity and Range for every detected object.
   
   **torchVision resnet50 model**
-  * type "sudo apt-get install python3 \ python3-pip \ python3-opencv" 
-  * type "pip3 install torchvision"
+  * type `sudo apt-get install python3 \ python3-pip \ python3-opencv` 
+  * type `pip3 install torchvision`
   * download the model on the "zedboard-pytorch-resnet50-obj-detection" branch.
-  * type "nano object_detection.py" in de linux terminal to open the python program.
+  * type `nano object_detection.py` in de linux terminal to open the python program.
   * scroll to the bottom where a .png image is requested.
   
   <p align="center"><img src="python_main.png"></p>
