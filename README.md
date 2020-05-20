@@ -88,4 +88,15 @@ The UUID error should now be fixed and "colcon build" can be executed succesfull
 </details>
 <details>
   <summary>Radar</summary>
+  
+  ## mmWaveQuickConfig: Command failed ##
+  
+  If this error occurs
+  
+  <p align="center"><img src="https://github.com/randomRexx/ADAS_AI_cart/blob/radar/Error_Command_Failed.PNG"></p>
+  
+  Rerun the command `roslaunch ti_mmwave_rospkg 1642es2_short_range.launch`
+  
+  If the error still occurs after a few reruns, restart the radar.
+  
 </details>
