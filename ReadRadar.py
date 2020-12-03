@@ -1,16 +1,45 @@
-
 import serial
 import time
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import DBSCAN
 import pyqtgraph as pg
 from pyqtgraph.Qt import QtGui
 
+from matplotlib.animation import FuncAnimation
+
 # Change the configuration file name
-configFileName = 'profileJethro.cfg'
+configFileName = 'profile15fps.cfg'
 CLIport = {}
 Dataport = {}
 byteBuffer = np.zeros(2**15,dtype = 'uint8')
-byteBufferLength = 0;
+byteBufferLength = 0
+
+
+def processData(detObj):
+    x = detObj['x']
+    y = detObj['y']
+    x.ndim
+    y.ndim
+
+    pos = np.vstack((x, y)).T
+    df = pd.DataFrame(pos, columns=['x', 'y'])
+    ax1 = df.plot.scatter(x='x',
+                      y='y',
+                      c='DarkBlue')
+    clustering = DBSCAN(eps=0.05, min_samples=1)
+    clustering.fit(pos)
+    labels = clustering.labels_
+    n_clusters = len(set(labels)) - (1 if -1 in labels else 0)     
+    
+    
+    plt.scatter(pos[:,0], pos[:,1], c=labels)
+    plt.title('Number of detected objects: %d' % n_clusters)
+    plt.show()
+    
+    velocity = detObj['dopplerIdx'] * detObj['doppler']
+    rng = detObj['rangeIdx'] * detObj['range']
 
 
 # ------------------------------------------------------------------
@@ -64,12 +93,12 @@ def parseConfigFile(configFileName):
             rampEndTime = float(splitWords[5])
             freqSlopeConst = float(splitWords[8])
             numAdcSamples = int(splitWords[10])
-            numAdcSamplesRoundTo2 = 1;
+            numAdcSamplesRoundTo2 = 1
             
             while numAdcSamples > numAdcSamplesRoundTo2:
-                numAdcSamplesRoundTo2 = numAdcSamplesRoundTo2 * 2;
+                numAdcSamplesRoundTo2 = numAdcSamplesRoundTo2 * 2
                 
-            digOutSampleRate = int(splitWords[11]);
+            digOutSampleRate = int(splitWords[11])
             
         # Get the information about the frame configuration    
         elif "frameCfg" in splitWords[0]:
@@ -100,11 +129,11 @@ def readAndParseData16xx(Dataport, configParameters):
     global byteBuffer, byteBufferLength
 
     # Constants
-    OBJ_STRUCT_SIZE_BYTES = 12;
-    BYTE_VEC_ACC_MAX_SIZE = 2**15;
-    MMWDEMO_UART_MSG_DETECTED_POINTS = 1;
-    MMWDEMO_UART_MSG_RANGE_PROFILE   = 2;
-    maxBufferSize = 2**15;
+    OBJ_STRUCT_SIZE_BYTES = 12
+    BYTE_VEC_ACC_MAX_SIZE = 2**15
+    MMWDEMO_UART_MSG_DETECTED_POINTS = 1
+    MMWDEMO_UART_MSG_RANGE_PROFILE   = 2
+    maxBufferSize = 2**15
     magicWord = [2, 1, 4, 3, 6, 5, 8, 7]
     
     # Initialize variables
@@ -287,8 +316,8 @@ def update():
         x = -detObj["x"]
         y = detObj["y"]
         
-        s.setData(x,y)
-        QtGui.QApplication.processEvents()
+        #s.setData(x,y)
+        #QtGui.QApplication.processEvents()
     
     return dataOk
 
@@ -302,19 +331,18 @@ CLIport, Dataport = serialConfig(configFileName)
 configParameters = parseConfigFile(configFileName)
 
 # START QtAPPfor the plot
-app = QtGui.QApplication([])
+#app = QtGui.QApplication([])
 
 # Set the plot 
-pg.setConfigOption('background','w')
-win = pg.GraphicsWindow(title="2D scatter plot")
-p = win.addPlot()
-p.setXRange(-15,15)
-p.setYRange(0,16)
-p.setLabel('left',text = 'Y position (m)')
-p.setLabel('bottom', text= 'X position (m)')
-s = p.plot([],[],pen=None,symbol='o')
-    
-   
+#pg.setConfigOption('background','w')
+#win = pg.GraphicsWindow(title="2D scatter plot")
+#p = win.addPlot()
+#p.setXRange(-15,15)
+#p.setYRange(0,16)
+#p.setLabel('left',text = 'Y position (m)')
+#p.setLabel('bottom', text= 'X position (m)')
+#s = p.plot([],[],pen=None,symbol='o')
+
 # Main loop 
 detObj = {}  
 frameData = {}    
@@ -323,12 +351,37 @@ while True:
     try:
         # Update the data and check if the data is okay
         dataOk = update()
-        
         if dataOk:
             # Store the current frame into frameData
-            frameData[currentIndex] = detObj
-            currentIndex += 1
-        
+            #frameData[currentIndex] = detObj
+            #currentIndex += 1
+            #processData(detObj)
+            #CLUSTERFUCK DO NOT LOOK
+            x = detObj['x']
+            y = detObj['y']
+            x.ndim
+            y.ndim
+
+            pos = np.vstack((x, y)).T
+            df = pd.DataFrame(pos, columns=['x', 'y'])
+            
+            clustering = DBSCAN(eps=0.05, min_samples=1)
+            clustering.fit(pos)
+            labels = clustering.labels_                      
+            n_clusters = len(set(labels)) - (1 if -1 in labels else 0)
+            
+            
+            ax1 = df.plot.scatter(x='x',
+                                  y='y',
+                                  c=labels)
+
+            #plt.scatter(pos[:,0], pos[:,1], c=labels)
+            plt.title('Number of detected objects: %d' % n_clusters)
+            plt.show()
+            
+            # Velocity in m/sec = Doppler index * doppler resolution
+            velocity = detObj['dopplerIdx'] * detObj['doppler']
+            rng = detObj['rangeIdx'] * detObj['range']
         time.sleep(0.03) # Sampling frequency of 30 Hz
         
     # Stop the program and close everything if Ctrl + c is pressed
@@ -338,10 +391,3 @@ while True:
         Dataport.close()
         win.close()
         break
-        
-    
-
-
-
-
-
